@@ -3,7 +3,7 @@ import json
 def all_same(items):
     return all(x == items[0] for x in items)
 
-with open('C:\\Users\\alper\\Desktop\\Research\\datasets\\road\\json\\osm_london_central_roadways.json') as json_data:    
+with open('roadways.json') as json_data:    
     data = json.load(json_data)
 
 ways = []
@@ -36,7 +36,7 @@ ways_and_nodes.sort(key=lambda x: x[0])
 
 # If a node is found in multiple ways belong to different streets.
 # In other words, if two different streets have a common node, it means that this node is an intersection point.
-f = open('C:\\Users\\alper\\Desktop\\Research\\datasets\\road\\osm_london_central_intersections.csv','a+')
+f = open('intersections.csv','a+')
 for node in node_list:
     intersecting_ways = [x for x in ways_and_nodes if x[0] == node[0]]
     intersecting_streets = list(map(lambda r: r[1][1], intersecting_ways))
