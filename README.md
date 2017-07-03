@@ -1,6 +1,6 @@
 I have used intersection numbers in my predictive data model to predict traffic accidents. However, there is no data source giving intersection points in a city so that I developed a python script to find intersection locations in a specific area by using OSM json data.
 
-Firstly, run the given code below in overpass-turbo.eu in a specific area. Then, obtain road lines and nodes in data section.
+Firstly, run the given code below in overpass-turbo.eu in a specific area. Then, download json data to roadways.json file.
 
 [out:json][timeout:25];
 // gather results
@@ -37,3 +37,7 @@ Firstly, run the given code below in overpass-turbo.eu in a specific area. Then,
 out body;
 >;
 out skel qt;
+
+The data includes ways and nodes.
+Each street has multiple ways whereas each way has multiple nodes.
+If a node is contained by different ways belong to different streets. It means that this node is an intersection point.
