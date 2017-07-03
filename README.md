@@ -2,6 +2,7 @@ I have used intersection numbers in my predictive data model to predict traffic 
 
 Firstly, run the given code below in overpass-turbo.eu in a specific area. Then, download json data to roadways.json file.
 
+'''
 [out:json][timeout:25];
 // gather results
 (
@@ -37,6 +38,7 @@ Firstly, run the given code below in overpass-turbo.eu in a specific area. Then,
 out body;
 >;
 out skel qt;
+'''
 
 The data includes ways and nodes.
 Each street has multiple ways whereas each way has multiple nodes.
