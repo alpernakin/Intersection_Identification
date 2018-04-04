@@ -4,7 +4,7 @@ Firstly, run the given code below in overpass-turbo.eu in a specific area. Then,
 
 ```
 [out:json][timeout:25];
-// gather results
+// fetch results
 (
   // query part for: “highway=primary”
   node["highway"="primary"]({{bbox}});
